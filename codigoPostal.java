@@ -8,11 +8,12 @@ public class codigoPostal {
     public static final String QUOTE = "\""; //esto es para comillas, lo puse ms que nada por si se me ofrece mas adelante
 
     public static void main(String[] args) {
+        String archivo = "codigos_postales_hmo.csv";
         //creamos un HashMap para contar cuantas veces se repit eel codigo postal
         Map<String, Integer> conteo = new HashMap<>();
 
         //utilizamos BufferedReader para leer el archivo, y seleciconamos la ruta correspondiente
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sebas\\Downloads\\codigos_postales_hmo.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String line; //nos permite leer por lineas el archivo
 
             while ((line = br.readLine()) != null) { // nos permite leer lineas del documento mientras haya
